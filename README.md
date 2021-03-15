@@ -1,2 +1,2 @@
-# KivaCapstoneProject
+# Kiva Capstone Project
 lololol
