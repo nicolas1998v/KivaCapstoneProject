@@ -1,5 +1,5 @@
 # General Assembly Capstone Project: Kiva Loans
-This repository contains the code for my Capstone project on Kiva Loans, undertaken as part of General Assembly's Data Science Immersive course between November 2020 and February 2021.
+This repository contains the code for my Capstone project on Kiva Loans, undertaken as part of General Assembly's Data Science Immersive course between November 2020 and February 2021. This project consisted in predicting loans which would 'expire', or in other words those who don't reach their fundraising target, in order to promote them on the website. 
 
 ## Part 1:  Cleaning 
 - Perform preliminary data munging and cleaning of your data: removing nulls, reducing value counts, feature extractions. 
