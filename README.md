@@ -13,6 +13,6 @@ This repository contains the code for my Capstone project on Kiva Loans, underta
 - Detail your model and approach with concisely commented code. 
 - Evaluate model performance and discuss results. 
 
-## Part 4: Presentation 
+## Part 4: [Presentation]( https://docs.google.com/presentation/d/18hdJlMiIoCoKHjRcSIvIPgoN-mT_E5lz_FUGBUjFQaU/edit#slide=id.p)
 - Host a short, well rehearsed presentation of your project for a non-technical audience. 
 - Cover goals, success criteria, data, approach, basic description of model, findings, risks/limitations, impact, next steps and conclusions.
