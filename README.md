@@ -1,5 +1,5 @@
 # General Assembly Capstone Project: Kiva Loans
-This repository contains the code for my Capstone project on the 2 million open-data dataset [made available](https://www.kiva.org/build/data-snapshots)by Kiva, undertaken as part of General Assembly's Data Science Immersive course between November 2020 and February 2021. This project consisted in predicting loans which would 'expire', or in other words those who don't reach their fundraising target in the website, in order to subsequently promote them. 
+This repository contains the code for my Capstone project on the 2 million open-data dataset [made available](https://www.kiva.org/build/data-snapshots) by Kiva, undertaken as part of General Assembly's Data Science Immersive course between November 2020 and February 2021. This project consisted in predicting loans which would 'expire', or in other words those who don't reach their fundraising target in the website, in order to subsequently promote them. 
 
 ## Part 1: [Cleaning](http://localhost:8888/notebooks/project/project-capstone/Capstone%20-%20Data%20Cleaning.ipynb)
 - Perform preliminary data munging and cleaning of your data: removing nulls, reducing value counts, feature extractions. 
