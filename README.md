@@ -5,7 +5,7 @@ This repository contains the code for my Capstone project on Kiva Loans, underta
 - Perform preliminary data munging and cleaning of your data: removing nulls, reducing value counts, feature extractions. 
 - Removing unnecessary rows and columns.
 
-## Part 2: EDA and Preprocessing 
+## Part 2: [EDA and Preprocessing]( https://github.com/nicolas1998v/KivaCapstoneProject/blob/main/EDA%20-%20NLP.ipynb)
 - Quantitatively visualise your data, looking at each values correlation with the target variable. 
 - Perform Natural Language Processing on the text variables, and dummify the object columns.
 
