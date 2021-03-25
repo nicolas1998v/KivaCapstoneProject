@@ -9,7 +9,7 @@ This repository contains the code for my Capstone project on the 2 million open-
 - Quantitatively visualise your data, looking at each values correlation with the target variable. 
 - Perform Natural Language Processing on the text variables, and dummify the object columns.
 
-## Part 3: [Modelling]  
+## Part 3: [Modelling](https://github.com/nicolas1998v/KivaCapstoneProject/blob/main/Modelling.ipynb) 
 - Detail your model and approach with concisely commented code. 
 - Evaluate model performance and discuss results. 
 
