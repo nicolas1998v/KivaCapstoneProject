@@ -10,13 +10,13 @@ While doing some high-level EDA on the data, I was asking myself 2 questions:
 -  Are lenders concerned by default or delinquency rates when deciding whether to fund a loan or not? And if it's not this they're concerned by, then what is it ?
 - If lenders aren't concerned by default rates, could we not create a model to try and predict the loans that are expired to subsequently promote them? 
 
-If lenders do care about their own welfare when making these decisions, then there is not much point in promoting these loans as nobody would fund them anyway as it would just be grouping high default rate loans which people wouldn't want to fund anyway due to their preferences. If people don't care about their own welfare when making these decisions, then this group would be uncorrelated with default rates. This means that there's some borrowers who didn't get their loan who would have been able to repay that loan. This model could be a help for those people with characteristics likely in making their loan 'expired' but who could've repayed that loan and been happy.
+If lenders do care about their own welfare when making these decisions, then there is not much point in promoting these loans as it would just be grouping high default rate loans which people wouldn't want to fund anyway due to their preferences. If people don't care about their own welfare when making these decisions, then this group would be uncorrelated with default rates. This means that there's some borrowers who didn't get their loan who would have been able to repay that loan. This model could help those people with characteristics likely in making their loan 'expired' but who could have repayed that loan and been happy with it.
 
 ### DEFAULT RATE SIDE PROJECT
 
-To see if default rates impacted these decisions, I scraped some data from Kiva's website and concatenated it to the main dataset. However, in the process I resulted having default rate data for less banks than the amount of Banks there was in the main dataset, meaning this default rate analysis had to be in a separate dataset, a subset of the main dataset. I had to clean and model two different datasets. In the folders above, the notebooks with 'Extra Variables' in their title are the notebooks conducting this analysis. This is a side project that gives greater insight to the main model and follows most of the steps the main project has taken to clean, display and model the data.
+To see if default rates impacted these decisions, I scraped some data from Kiva's website and concatenated it to the main dataset. However, in the process I resulted having default rate data for less banks than the amount of banks there was in the main dataset, meaning this default rate analysis had to be in a separate dataset, a subset of the main dataset. I had to clean and model two different datasets. This is why there is 2 folders above, one for the main project and one for the side project. This is a side project that gives greater insight to the main model and follows most of the steps the main project has taken to clean, display and model the data.
 
-The other notebooks are the main project. Underneath are the four main parts of this experience with examples of what I did. 
+Underneath are the four main parts of this experience with examples of what I did. 
 
 ## [Part 1: Cleaning](http://localhost:8888/notebooks/project/project-capstone/Capstone%20-%20Data%20Cleaning.ipynb)
 
@@ -66,7 +66,9 @@ These are the words I had when using NLP on the description column.
  
  ## [Part 3: Modelling](https://github.com/nicolas1998v/KivaCapstoneProject/blob/main/Modelling.ipynb) 
 
-- Detail your model. Due to the severe class imablance, I tried 2 methods to try and cope with this balance: 
+- Detail your model. 
+
+Due to the severe class imbalance, I tried 2 methods to try and cope with this challenge: 
 
 1. Cost-Sensitive Methods. Used Grid-Search to tune the 'class_weight' parameter in order to give more importance to the minority class.
 
@@ -90,14 +92,15 @@ These are the words I had when using NLP on the description column.
 Hence, 14.5% of loans are still False Postives, or loans that are of the 'funded' class but have been predicted as 'expired'. A next goal could be to bring that down to 10% and then 5%.
 
 ## [Part 4: Presentation]( https://docs.google.com/presentation/d/18hdJlMiIoCoKHjRcSIvIPgoN-mT_E5lz_FUGBUjFQaU/edit#slide=id.p)
+
 - Host a short, well rehearsed presentation of your project for a non-technical audience. 
 - Cover goals, success criteria, data, approach, basic description of model, findings, risks/limitations, impact, next steps and conclusions.
 
 # CONCLUSION
 
 In conclusion, the side project proved that default rates are not the reason why lenders don't fund loans. This is because :
-1. The EDA didn't show a downward trend in funded percentages when increasing default rates
-2. Model results weren't better
+1. The EDA didn't show a downward trend in funded percentages when increasing default rates.
+2. Model results weren't better.
 3. Inference graphs from these models didn't have default rates column as high predictors. 
 
 So the model for the main project makes since in doing. 
