@@ -1,9 +1,11 @@
 # General Assembly Capstone Project: Kiva Loans
+
 This repository contains the code for my Capstone project on the 2 million dataset [made available](https://www.kiva.org/build/data-snapshots) by Kiva, undertaken as part of General Assembly's Data Science Immersive course between November 2020 and February 2021. I chose this project as I would like to use my data science skills for the social good and wanted to find a project with humanitarian data. 
 
-This project consisted in predicting loans which would 'expire', or in other words those who won't reach their fundraising target in the website, in order to subsequently promote them. However, these 'expired' loans consitute 4.5% of all totla loans, making this a severely imbalanced classification problem.
+This project consisted in predicting loans which would 'expire', or in other words those who won't reach their fundraising target in the website, in order to subsequently promote them. However, these 'expired' loans consitute 4.5% of total loans, making this a severely imbalanced classification problem.
 
 ## Problem Statement:
+
 While doing some high-level EDA on the data, I was asking myself 2 questions:
 -  Are lenders concerned by default or delinquency rates when deciding whether to fund a loan or not? And if it's not this they're concerned by, then what is it ?
 - If lenders aren't concerned by default rates, could we not create a model to try and predict the loans that are expired to subsequently promote them? 
