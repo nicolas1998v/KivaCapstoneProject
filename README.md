@@ -13,6 +13,7 @@ While doing some high-level EDA on the data, I was asking myself 2 questions:
 If lenders do care about their own welfare when making these decisions, then there is not much point in promoting these loans as it would just be grouping high default rate loans which people wouldn't want to fund anyway due to their preferences.
 
 If lenders don't care about their own welfare when making these decisions, then the problem isn't exogenous but endogenous, which is fixable. Supposing that loan amount is the main predictor for not having your loan funded, we could for example put an amount ceiling if your loan is predicted as 'expired' in order to have this loan promoted. Or if the predictors are more varied, then lenders could each find their own pick matching their preferences when checking the loans in this 'low quality' group.
+
 In the latter case, the group would be uncorrelated with default rates. This means that there's some borrowers who didn't get their loan who would have been able to repay that loan. This model could help the people with characteristics likely in making their loan 'expired' but who could have repayed that loan and been happy with it.
 
 ### DEFAULT RATE SIDE PROJECT
