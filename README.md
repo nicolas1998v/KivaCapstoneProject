@@ -19,6 +19,10 @@ In the latter case, the group would be uncorrelated with default rates. This mea
 
 To see if default rates impacted these decisions, I scraped some data from Kiva's website and concatenated it to the main dataset. However, in the process I resulted having default rate data for less banks than the amount of banks there was in the main dataset, meaning this default rate analysis had to be in a separate dataset, a subset of the main dataset. I had to clean and model two different datasets. This is why there is 2 folders above, one for the main project and one for the side project. This is a side project that gives greater insight to the main model and follows most of the steps the main project has taken to clean, display and model the data.
 
+## SUCCESS METRIC
+
+The Score we want to maximise is Precision. Since the use case scenario is promoting future 'expired' loans on the front page of the website, we want to make sure to predict only these loans, and minimise those that are predicted 'expired' too but would have been actually funded either way - or False Positives. Minimising False Positives means increasing precision.
+
 Underneath are the four main parts of this experience with examples of what I did. 
 
 ## [Part 1: Cleaning](http://localhost:8888/notebooks/project/project-capstone/Capstone%20-%20Data%20Cleaning.ipynb)
