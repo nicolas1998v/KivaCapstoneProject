@@ -57,7 +57,7 @@ I create a feature named Campaign Duration, taking the difference between the po
 
 - Removing unnecessary rows and columns.
 
-Since Kiva doesn't provide documentation, there were some columns in which I had trouble finding their meaning, and I had to do some investigation to realise they were not suitable for the analysis. Please look at the notebook if you want to see which columns and my underlying thought process beneath this decision.
+Since Kiva doesn't provide documentation, there were some columns which I had trouble understanding their meaning, and I had to do some investigation to realise they were not suitable for the analysis. Please look at the notebook if you want to see which columns I removed and my underlying thought process behind this decision.
 
 ## [Part 2: EDA and Preprocessing]( https://github.com/nicolas1998v/KivaCapstoneProject/blob/main/EDA%20-%20NLP.ipynb)
 - Quantitatively visualise your data, looking at each values correlation with the target variable. 
