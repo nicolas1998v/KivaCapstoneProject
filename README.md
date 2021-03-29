@@ -2,7 +2,7 @@
 
 This repository contains the code for my Capstone project on the 2 million dataset [made available](https://www.kiva.org/build/data-snapshots) by Kiva, undertaken as part of General Assembly's Data Science Immersive course between November 2020 and February 2021. I chose this project as I would like to use my data science skills for the social good and wanted to find a project with humanitarian data. 
 
-This project consisted in predicting loans which would 'expire', or in other words those who won't reach their fundraising target in the website, in order to subsequently promote them. However, these 'expired' loans consitute 4.5% of total loans, making this a severely imbalanced classification problem.
+This project consisted in predicting loans which would 'expire', or in other words those who won't reach their fundraising target in the website, in order to subsequently promote them on the front page of the website. These 'expired' loans consitute 4.5% of total loans, making this a severely imbalanced classification problem.
 
 ## PROBLEM STATEMENT
 
