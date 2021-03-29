@@ -10,7 +10,10 @@ While doing some high-level EDA on the data, I was asking myself 2 questions:
 -  Are lenders concerned by default or delinquency rates when deciding whether to fund a loan or not? And if it's not this they're concerned by, then what is it ?
 - If lenders aren't concerned by default rates, could we not create a model to try and predict the loans that are expired to subsequently promote them? 
 
-If lenders do care about their own welfare when making these decisions, then there is not much point in promoting these loans as it would just be grouping high default rate loans which people wouldn't want to fund anyway due to their preferences. If people don't care about their own welfare when making these decisions, then this group would be uncorrelated with default rates. This means that there's some borrowers who didn't get their loan who would have been able to repay that loan. This model could help those people with characteristics likely in making their loan 'expired' but who could have repayed that loan and been happy with it.
+If lenders do care about their own welfare when making these decisions, then there is not much point in promoting these loans as it would just be grouping high default rate loans which people wouldn't want to fund anyway due to their preferences.
+
+If lenders don't care about their own welfare when making these decisions, then the problem isn't exogenous but endogenous, which is fixable. Supposing that loan amount is the main predictor for not having your loan funded, we could for example put an amount ceiling if your loan is predicted as 'expired' in order to have this loan promoted. Or if the predictors are more varied, then lenders could each find their own pick matching their preferences when checking the loans in this 'low quality' group.
+In the latter case, the group would be uncorrelated with default rates. This means that there's some borrowers who didn't get their loan who would have been able to repay that loan. This model could help the people with characteristics likely in making their loan 'expired' but who could have repayed that loan and been happy with it.
 
 ### DEFAULT RATE SIDE PROJECT
 
@@ -105,4 +108,4 @@ In conclusion, the side project proved that default rates are not the reason why
 
 So the model for the main project makes since in doing. 
 The results from the main project models were 0.854 in test set precision, with 14.5% of False Positives. 
-Loan Amounts, Lender Term, Genders and Sector seem to be the main predictors.
+Loan Amounts, Lender Term, Genders and Sector seem to be the main predictors. So for example, this group I promote on the website's front page could have a cap in loan amounts and lender terms to make them more attractive to lenders.
