@@ -11,8 +11,8 @@ While doing some high-level EDA on the data, I had several considerations in min
 -  Are lenders concerned by default or delinquency rates when deciding whether to fund a loan or not? 
 
 Kiva has data about each borrowers microfinancial bank, more specifically:
- - their default rates, or the percentage of ended loans which have failed to repay (measured in dollar volume, not units).
- - delinquency rates, or the amount of late payments divided by the total outstanding principal balance Kiva has with the bank. 
+  - their default rates, or the percentage of ended loans which have failed to repay (measured in dollar volume, not units).
+  - delinquency rates, or the amount of late payments divided by the total outstanding principal balance Kiva has with the bank. 
   
  These are two indicators describing a banks quality when paying back the loan to the lenders, which impact the lenders welfare.
  
