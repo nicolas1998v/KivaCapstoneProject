@@ -11,8 +11,8 @@ While doing some high-level EDA on the data, I had several considerations in min
 -  Are lenders concerned by default or delinquency rates when deciding whether to fund a loan or not? 
 
 Kiva has data about each borrowers microfinancial bank, more specifically:
-  - their default rates, or the percentage of ended loans which have failed to repay (measured in dollar volume, not units).
-  - delinquency rates, or the amount of late payments divided by the total outstanding principal balance Kiva has with the bank. 
+ 1. Default rates, or the percentage of ended loans which have failed to repay (measured in dollar volume, not units).
+ 2. Delinquency rates, or the amount of late payments divided by the total outstanding principal balance Kiva has with the bank. 
   
  These are two indicators describing a banks quality when paying back the loan to the lenders, which impact the lenders welfare.
  
@@ -107,17 +107,17 @@ Only 4.5% of labels were positive. I tried two methods to cope with the severe c
 
 <img width="1128" alt="Screenshot 2021-03-27 at 23 02 38" src="https://user-images.githubusercontent.com/57761032/112737203-8bc48580-8f50-11eb-9cd9-a828f6ad7d0c.png">
 
-With 0.854 in test set precision, the basic model out-performed the other 2 methods. Now, let's see how its confusion matrix looks like.
+With 0.854 in test set precision, the basic model out-performed the other 2 methods(Cost-Sensitive best score: 0.842. Sampling best score: 0.740). Now, let's see how its confusion matrix looks like.
 
 ### Model Performance.
 
 <img width="1024" alt="Screenshot 2021-03-27 at 22 45 35" src="https://user-images.githubusercontent.com/57761032/112736895-27082b80-8f4e-11eb-9c03-6822407c6830.png">
 
 This chart shows the results of the best model. On the far left we have the y-axis with the label values, 0 for 'Funded' and 1 for 'Expired'. For both of these charts, we have:
-Loans that were originally funded and were predicted as funded on the top left of the chart, or True Negatives.
-Loans that were originally expired and were predicted as funded on the bottom left of the chart, or False Negatives.
-Loans that were originally funded and were predicted as expired on the top right of the chart, or False Positives.
-Loans that were originally expired and were predicted as expired on the bottom right of the chart, or True Positives.
+- Loans that were originally funded and were predicted as funded on the top left of the chart, or True Negatives.
+- Loans that were originally expired and were predicted as funded on the bottom left of the chart, or False Negatives.
+- Loans that were originally funded and were predicted as expired on the top right of the chart, or False Positives.
+- Loans that were originally expired and were predicted as expired on the bottom right of the chart, or True Positives.
 
 The left hand chart shows the training set, which has near to perfect scores due to its inherent nature of being the training set. 
 The right hand chart shows the testing set. The value we want to minimise is the False Positives on the top right of the chart. 
