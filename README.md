@@ -4,7 +4,7 @@ This repository contains the code for my Capstone project on the 2 million datas
 
 This project consisted in predicting loans which would 'expire', or in other words those who won't reach their fundraising target in the website, in order to subsequently promote them. However, these 'expired' loans consitute 4.5% of total loans, making this a severely imbalanced classification problem.
 
-## Problem Statement:
+## PROBLEM STATEMENT:
 
 While doing some high-level EDA on the data, I was asking myself 2 questions:
 -  Are lenders concerned by default or delinquency rates when deciding whether to fund a loan or not? And if it's not this they're concerned by, then what is it ?
