@@ -49,13 +49,13 @@ Underneath are the four main parts of these projects with examples of what I did
 
 In this part, I performed preliminary data munging and cleaning of the data.
   
-### 1. Removing nulls. 
+### 1. Removing nulls 
 
 19 columns out of 34 columns contained null values inside them which needed to be removed for modeling. 
 
 <img width="1021" alt="Screenshot 2021-03-27 at 22 27 30" src="https://user-images.githubusercontent.com/57761032/112736576-a1837c00-8f4b-11eb-93d7-6198db76ef55.png">
  
-  ### 2. Reducing value counts. 
+  ### 2. Reducing value counts 
 
 4 columns had many values in them. For example, the borrower genders column had nearly 25 thousand values. Since they are of type 'object', these values need to be dummified before modeling. A column with 25 thousand values will result in 25 thousand columns after dummification. This large amount of columns isn't optimal for modeling as it would incur computational difficulties that my computer wouldn't be able to overcome. In addition, it makes your columns values easier to understand. This is why I reduced the number of values for these 4 object columns.  
   
@@ -65,7 +65,7 @@ For this specific example, I managed to reduce it to 6 values.
 
  <img width="1009" alt="Screenshot 2021-03-27 at 22 18 54" src="https://user-images.githubusercontent.com/57761032/112736430-6d5b8b80-8f4a-11eb-8b72-f687c3fdb557.png">
 
-### 3. Feature Extractions.
+### 3. Feature Extractions
 
 I created 4 features out of this dataset. Here, I create a feature out of the borrower_genders column mentioned above that counts the number of males per loan.
  
@@ -75,7 +75,7 @@ I created a feature named ***campaign duration***, taking the difference between
 
 <img width="945" alt="Screenshot 2021-03-27 at 22 31 55" src="https://user-images.githubusercontent.com/57761032/112736648-3f774680-8f4c-11eb-8aa6-7a67b119ad1b.png">
 
-### 4. Removing unnecessary rows and columns.
+### 4. Removing unnecessary rows and columns
 
 Since Kiva doesn't provide documentation for its open-souce dataset, there were some columns which I had trouble understanding their meaning, and I had to do some investigation to realise they were not suitable for the analysis. Please look at the notebook if you want to see which columns I removed and my underlying thought process behind this decision.
 Some loans were still in their crowdfunding campaign, so I removed these.
@@ -122,7 +122,7 @@ Only 4.5% of labels were positive. I tried two methods to cope with the severe c
 
 With 0.854 in test set precision, the basic model out-performed the other 2 methods(Cost-Sensitive best score: 0.842. Sampling best score: 0.740). Now, let's see how its confusion matrix looks like.
 
-### Model Performance.
+### Model Performance
 
 <img width="1024" alt="Screenshot 2021-03-27 at 22 45 35" src="https://user-images.githubusercontent.com/57761032/112736895-27082b80-8f4e-11eb-9c03-6822407c6830.png">
 
