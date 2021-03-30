@@ -40,7 +40,7 @@ MatplotLib
 NumPy
 DateTime
 BeautifulSoup
-Sci-kit Learn
+SciKit Learn
 ```
 
 Underneath are the four main parts of these projects with examples of what I did. 
