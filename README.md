@@ -4,7 +4,7 @@ This repository contains the code for my Capstone project on [Kiva's open source
 
 Kiva is an organization that allows people to lend small amounts of money via the Internet to help microfinance organizations in the developing world. These local microfinance organizations help local business people to post profiles and business plans on Kiva. Once online, lenders select profiles and business plans to fund. This is a crowdfunding website, meaning each loan has a campaign period in which borrowers have to convince lenders to fund their loan all the way up to the fundraising target. If the target isn't reached, the money is given back to the lenders. This project consisted in predicting loans which would 'expire', or in other words those who won't reach their fundraising target, in order to subsequently promote them on the front page of the website. These 'expired' loans consitute 4.5% of total loans, making this a severely imbalanced classification problem.
 
-## PROBLEM STATEMENT
+## Problem Statement
 
 While doing some high-level EDA on the data, I had several considerations in mind:
 
@@ -26,9 +26,22 @@ If lenders don't care about their own welfare when making these decisions, then 
 
 In this latter case, the group would be uncorrelated with default rates. This means that there's some borrowers who didn't get their loan who would have been able to repay that loan. This model could help the people with characteristics likely in making their loan 'expired' but who could have repayed that loan and been happy with it.
 
-### 2 PROJECTS
+### 2 Projects
 
 To see if default rates impacted these decisions I decided to conduct a side project by scraping some data from Kiva's website and concatenating it to the main dataset. However, for this side project I resulted in having default rate data for less banks than the total amount of banks in the main dataset. This meant that this default rate analysis had to be done with a subset of the main dataset. I had to clean and model two different datasets. This is why there is 2 directories above, one for the main project and one for the side project. This side project follows most of the steps the main project has taken to clean, display and model the data.
+
+### Prerequisites
+
+To run the code, there are a number of dependencies. You may need to pip install the following:
+
+```python
+Pandas
+MatplotLib
+NumPy
+DateTime
+BeautifulSoup
+Sci-kit Learn
+```
 
 Underneath are the four main parts of these projects with examples of what I did. 
 
