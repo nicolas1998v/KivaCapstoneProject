@@ -154,7 +154,7 @@ Default rates aren't the reason why lenders don't fund loans. This is due to 3 i
 
 <img width="553" alt="Screenshot 2021-03-29 at 20 15 22" src="https://user-images.githubusercontent.com/57761032/112887808-82135d00-90cb-11eb-8fb9-a70afd31d396.png">
 
-2. Model results weren't better. The best model came back with 0.844 in test set precision, down 1 point from the main model precision (0.854).
+2. Model results weren't better. The best model came back with 0.852 in test set precision, down 0.2 points from the main model precision (0.854).
 
 3. Inference graphs from these models didn't have default rates column as high predictors. 
 
