@@ -57,7 +57,7 @@ In this part, I performed preliminary data munging and cleaning of the data.
  
   ### 2. Reducing value counts 
 
-4 columns had many values in them. For example, the borrower genders column had nearly 25 thousand values. Since they are of type 'object', these values need to be dummified before modeling. A column with 25 thousand values will result in 25 thousand columns after dummification. This large amount of columns isn't optimal for modeling as it would incur computational difficulties that my computer wouldn't be able to overcome. In addition, it makes your columns values easier to understand. This is why I reduced the number of values for these 4 object columns.  
+4 columns had many values in them. For example, the borrower genders column had nearly 25 thousand values. Since they are of type 'object', these values need to be dummified before modeling. A column with 25 thousand values will result in 25 thousand columns after dummification. This large amount of columns isn't optimal for modeling as it would incur computational difficulties that my computer wouldn't be able to overcome. In addition, reducing value counts makes your columns values easier to understand. This is why I reduced the number of values for these 4 object columns.  
   
  <img width="1112" alt="Screenshot 2021-03-27 at 22 17 29" src="https://user-images.githubusercontent.com/57761032/112736408-3d13ed00-8f4a-11eb-8b1c-c583258a3afc.png">
 
