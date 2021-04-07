@@ -17,7 +17,7 @@ Underneath are the four main steps of each project, with examples of what I did.
 
 ## [Part 1: Data Cleaning](https://github.com/nicolas1998v/KivaCapstoneProject/blob/main/Main%20Project/Data%20Cleaning.ipynb)
 
-The dataset had 34 columns. In the end, I used tk in the model. Many had to be cleaned. In addition, 5 of the columns were used to extract additional features. In the end, the model was trained on tk features.
+The dataset had 34 columns. In the end, I used 23 in the model. Many had to be cleaned. In addition, 5 of the columns were used to extract additional features. In the end, the model was trained on 939 features.
   
 ### 1. Removing nulls 
 
@@ -27,7 +27,7 @@ The dataset had 34 columns. In the end, I used tk in the model. Many had to be c
  
  ### 2. Reducing value counts 
 
-4 out of 34 columns had too many values in them. For example, the *borrower_genders* column had nearly 25 thousand distinct values. Since they are string columns, these values need to be dummified before modeling. A column with 25 thousand values will result in 25 thousand columns after dummification. This large amount of columns makes learning about gender effects impossible. In addition, reducing value counts makes your columns values easier to understand. This is why I reduced the number of values for these string columns.  
+4 out of 34 columns had too many values in them. For example, the **borrower_genders** column had nearly 25 thousand distinct values. Since they are string columns, these values need to be dummified before modeling. A column with 25 thousand values will result in 25 thousand columns after dummification. This large amount of columns makes learning about gender effects impossible. In addition, reducing value counts makes your columns values easier to understand. This is why I reduced the number of values for these string columns.  
   
  <img width="1112" alt="Screenshot 2021-03-27 at 22 17 29" src="https://user-images.githubusercontent.com/57761032/112736408-3d13ed00-8f4a-11eb-8b1c-c583258a3afc.png">
 
@@ -123,7 +123,7 @@ To define those rates:
   
  These two numbers tell a borrower if they're going to get payed back or not, which could impact their decision to lend.
 
-The problem is that Kiva does not provide default and delinquency rates in the dataset, so I had to scrape them from their website. The scraping code is [here](tk).
+The problem is that Kiva does not provide default and delinquency rates in the dataset, so I had to scrape them from their website. The scraping code is [here](https://github.com/nicolas1998v/KivaCapstoneProject/blob/main/Side%20Project/Data%20Appropriation.ipynb).
 
 If lenders do care about the banks default rate, then there is not much point in promoting loans from these banks.
 
@@ -131,7 +131,7 @@ If they don't, then the problem is in Kiva's control and could be fixable. To ch
 
 ### Main Project vs Side Project
 
-To analyse the impact of default rates, I scraped some data from Kiva's website and concatenated it to the main dataset. However, I was only able to get default rates for tk% of the banks in the main dataset. This meant that the default rate analysis had to be done on a subset of the data. This is why there are 2 directories above, one for the main project and one for the side project. The side project follows the same steps as the main project has taken to clean, display and model the smaller dataset.
+To analyse the impact of default rates, I scraped some data from Kiva's website and concatenated it to the main dataset. However, I was only able to get default rates for 47% of the banks in the main dataset. This meant that the default rate analysis had to be done on a subset of the data. This is why there are 2 directories above, one for the main project and one for the side project. The side project follows the same steps as the main project has taken to clean, display and model the smaller dataset.
 
 ## Conclusion
 
