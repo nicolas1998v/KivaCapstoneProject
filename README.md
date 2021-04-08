@@ -17,7 +17,7 @@ Underneath are the four main steps of each project, with examples of what I did.
 
 ## [Part 1: Data Cleaning](https://github.com/nicolas1998v/KivaCapstoneProject/blob/main/Main%20Project/Data%20Cleaning.ipynb)
 
-The dataset had 34 columns. In the end, I used 23 in the model. Many had to be cleaned. In addition, 5 of the columns were used to extract additional features. In the end, the model was trained on 939 features.
+The dataset had 34 columns. In the end, I used 23 in the model. Many had to be cleaned. In addition, 5 of the columns were used to extract additional features, and the string variables were encoded. In the end, the model was trained on 939 features.
   
 ### 1. Removing nulls 
 
