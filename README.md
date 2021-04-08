@@ -81,23 +81,23 @@ To solve this binary classification problem, I used Logistic Regression and Rand
 
 First, I decided to train these models without tackling the class imbalance problem, in order to have a baseline score to beat. 
 
-<img width="1020" alt="Screenshot 2021-03-27 at 23 03 35" src="https://user-images.githubusercontent.com/57761032/112737223-aac31780-8f50-11eb-8196-d1d932b53825.png">
+<img width="996" alt="Screenshot 2021-04-08 at 18 39 39" src="https://user-images.githubusercontent.com/57761032/114072116-cc4dc880-9899-11eb-976a-bcbf00beb1f9.png">
 
  Next, I needed to tackle the severe class imbalance. I tried two methods to cope with the fact that 4.5 % of the labels were positive. I researched these methods in the book "Imbalanced Classification with Python: Better Metrics, Balance Skewed Classes, Cost-Sensitive Learning" by Brownlee.
 
 1. Cost-Sensitive Method. I used Grid-Search to tune the 'class_weight' parameter in order to give more importance to the minority class.
 
-<img width="1010" alt="Screenshot 2021-03-27 at 22 44 19" src="https://user-images.githubusercontent.com/57761032/112736882-faecaa80-8f4d-11eb-8904-68c9968778f7.png">
+<img width="1010" alt="Screenshot 2021-04-08 at 18 51 24" src="https://user-images.githubusercontent.com/57761032/114073653-6eba7b80-989b-11eb-8bc3-64deafa8fc0f.png">
 
 2. Sampling methods. Sampled the training set to subsequently train with better class label percentages.
 
-<img width="1128" alt="Screenshot 2021-03-27 at 23 02 38" src="https://user-images.githubusercontent.com/57761032/112737203-8bc48580-8f50-11eb-9cd9-a828f6ad7d0c.png">
+<img width="1011" alt="Screenshot 2021-04-08 at 18 52 21" src="https://user-images.githubusercontent.com/57761032/114073764-8eea3a80-989b-11eb-9b3d-8183286ba85c.png">
 
-With 0.854 in test set precision, the basic model out-performed the other 2 methods(Cost-Sensitive best score: 0.842. Sampling best score: 0.740). Now, lets look at False Positives.
+With 0.879 in test set precision, the basic model out-performed the other 2 methods(Cost-Sensitive best score: 0.869. Sampling best score: 0.734). Now, lets look at False Positives.
 
 **Confusion Matrix**
 
-<img width="1024" alt="Screenshot 2021-03-27 at 22 45 35" src="https://user-images.githubusercontent.com/57761032/112736895-27082b80-8f4e-11eb-9c03-6822407c6830.png"> **update pic** and normalize
+<img width="591" alt="Screenshot 2021-04-08 at 18 40 19" src="https://user-images.githubusercontent.com/57761032/114072192-e12a5c00-9899-11eb-8823-769d41fe5302.png">
 
 This chart shows the results of the best model. On the far left we have the y-axis with the label values, 0 for 'Funded' and 1 for 'Expired'. For both of these charts, we have:
 - Loans that were originally funded and were predicted as funded on the top left of the chart, or True Negatives.
@@ -105,7 +105,10 @@ This chart shows the results of the best model. On the far left we have the y-ax
 - Loans that were originally funded and were predicted as expired on the top right of the chart, or False Positives.
 - Loans that were originally expired and were predicted as expired on the bottom right of the chart, or True Positives.
 
-Hence, only 14.5% of the loans our model thinks will expire are False Postives. That's pretty good! The next goal could be to bring that down to 10% and then 5% to increase precision further.
+Calculating the proportion of False Positives per the total amount of predicted postives, we have:
+- 77 / (77 + 560) = 0.1209
+
+Hence, only 12% of the loans our model thinks will expire are False Postives. That's pretty good! The next goal could be to bring that down to 10% and then 5% to increase precision further.
 
 ## [Part 4: Presentation]( https://docs.google.com/presentation/d/18hdJlMiIoCoKHjRcSIvIPgoN-mT_E5lz_FUGBUjFQaU/edit#slide=id.p)
 
@@ -137,7 +140,7 @@ To analyse the impact of default rates, I scraped some data from Kiva's website 
 
 ### Main Project
 
-The results from the main project models were 0.854 in test set precision, with 14.5% of False Positives. In other words, if our model was deployed to select promotions for Kiva's front page, it would make good selections 85% of the time. 
+The results from the main project models were 0.879 in test set precision, with 12% of False Positives. In other words, if our model was deployed to select promotions for Kiva's front page, it would make good selections 88% of the time. 
 
 **Loan Amounts**, **Lender Term**, **Genders** and **Sector** were the main predictors. 
 
@@ -149,7 +152,7 @@ Additionally, I found that bank default rates were not a major driver of expirat
 
 <img width="553" alt="Screenshot 2021-03-29 at 20 15 22" src="https://user-images.githubusercontent.com/57761032/112887808-82135d00-90cb-11eb-8fb9-a70afd31d396.png">
 
-2. Model results weren't better when we added this extra feature. The best model that included the feature came back with 0.852 in test set precision, down 0.2 points from the best model precision without it (0.854).
+2. Model results weren't better when we added this extra feature. The best model that included the feature came back with 0.852 in test set precision, down 2.5 points from the best model precision without it (0.879).
 
 3. Inference graphs from these models didn't have default rates column as high predictors. 
 
