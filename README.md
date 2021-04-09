@@ -105,7 +105,7 @@ This chart shows the results of the best model. On the far left we have the y-ax
 - Loans that were originally funded and were predicted as expired on the top right of the chart, or False Positives.
 - Loans that were originally expired and were predicted as expired on the bottom right of the chart, or True Positives.
 
-Calculating the proportion of False Positives per the total amount of predicted postives, we have:
+Calculating the proportion of False Positives per total amount of predicted postives, we have:
 - 77 / (77 + 560) = 0.1209
 
 Hence, only 12% of the loans our model thinks will expire are False Postives. That's pretty good! The next goal could be to bring that down to 10% and then 5% to increase precision further.
@@ -157,4 +157,4 @@ Additionally, I found that bank default rates were not a major driver of expirat
 3. Inference graphs from these models didn't have default rates column as high predictors. 
 
 
-Thank you for you attention.
+Thank you for your attention.
