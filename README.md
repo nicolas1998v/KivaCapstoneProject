@@ -81,23 +81,23 @@ To solve this binary classification problem, I used Logistic Regression and Rand
 
 First, I decided to train these models without tackling the class imbalance problem, in order to have a baseline score to beat. 
 
-<img width="996" alt="Screenshot 2021-04-08 at 18 39 39" src="https://user-images.githubusercontent.com/57761032/114072116-cc4dc880-9899-11eb-976a-bcbf00beb1f9.png">
+<img width="1034" alt="Screenshot 2021-04-13 at 09 30 13" src="https://user-images.githubusercontent.com/57761032/114522034-dd505e00-9c3a-11eb-9415-0b7c3021cba2.png">
 
  Next, I needed to tackle the severe class imbalance. I tried two methods to cope with the fact that 4.5 % of the labels were positive. I researched these methods in the book "Imbalanced Classification with Python: Better Metrics, Balance Skewed Classes, Cost-Sensitive Learning" by Brownlee.
 
 1. Cost-Sensitive Method. I used Grid-Search to tune the 'class_weight' parameter in order to give more importance to the minority class.
 
-<img width="1010" alt="Screenshot 2021-04-08 at 18 51 24" src="https://user-images.githubusercontent.com/57761032/114073653-6eba7b80-989b-11eb-8bc3-64deafa8fc0f.png">
+<img width="996" alt="Screenshot 2021-04-13 at 09 30 43" src="https://user-images.githubusercontent.com/57761032/114522099-ee00d400-9c3a-11eb-8254-1a5fe7c2df04.png">
 
 2. Sampling methods. Sampled the training set to subsequently train with better class label percentages.
 
-<img width="1011" alt="Screenshot 2021-04-08 at 18 52 21" src="https://user-images.githubusercontent.com/57761032/114073764-8eea3a80-989b-11eb-9b3d-8183286ba85c.png">
+<img width="1019" alt="Screenshot 2021-04-13 at 09 31 11" src="https://user-images.githubusercontent.com/57761032/114522156-fe18b380-9c3a-11eb-85ed-c270e865d6fe.png">
 
-With 0.879 in test set precision, the basic model out-performed the other 2 methods(Cost-Sensitive best score: 0.869. Sampling best score: 0.734). Now, lets look at False Positives.
+With 0.879 in test set precision, the basic model out-performed the other 2 methods(Cost-Sensitive best score: 0.875. Sampling best score: 0.745). Now, lets look at False Positives.
 
 **Confusion Matrix**
 
-<img width="591" alt="Screenshot 2021-04-08 at 18 40 19" src="https://user-images.githubusercontent.com/57761032/114072192-e12a5c00-9899-11eb-8823-769d41fe5302.png">
+<img width="505" alt="Screenshot 2021-04-13 at 09 32 47" src="https://user-images.githubusercontent.com/57761032/114522347-38825080-9c3b-11eb-8891-33cae0f51e39.png">
 
 This chart shows the results of the best model. On the far left we have the y-axis with the label values, 0 for 'Funded' and 1 for 'Expired'. For both of these charts, we have:
 - Loans that were originally funded and were predicted as funded on the top left of the chart, or True Negatives.
@@ -106,7 +106,7 @@ This chart shows the results of the best model. On the far left we have the y-ax
 - Loans that were originally expired and were predicted as expired on the bottom right of the chart, or True Positives.
 
 Calculating the proportion of False Positives per total amount of predicted postives, we have:
-- 77 / (77 + 560) = 0.1209
+- 80 / (80 + 583) = 0.1206
 
 Hence, only 12% of the loans our model thinks will expire are False Postives. That's pretty good! The next goal could be to bring that down to 10% and then 5% to increase precision further.
 
